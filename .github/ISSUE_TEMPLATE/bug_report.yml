@@ -1,0 +1,27 @@
+name: Bug report
+description: Report incorrect SQL generation, validation, or documentation.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: adapter
+    attributes:
+      label: Adapter
+      description: Which dbt adapter and version are you using?
+      placeholder: dbt-snowflake 1.10.0
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Minimal model or macro call that reproduces the issue.
+    validations:
+      required: true

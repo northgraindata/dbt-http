@@ -1,0 +1,26 @@
+name: Adapter request
+description: Request support for another warehouse or query engine.
+title: "[Adapter]: "
+labels: ["adapter"]
+body:
+  - type: input
+    id: adapter
+    attributes:
+      label: Adapter
+      placeholder: dbt-trino
+    validations:
+      required: true
+  - type: textarea
+    id: primitive
+    attributes:
+      label: Warehouse HTTP primitive
+      description: Link to official docs for the HTTP/UDF/remote-function feature.
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Required setup
+      description: What must users configure before dbt can call it?
+    validations:
+      required: true
