@@ -23,15 +23,7 @@ message and a link to the relevant setup section.
 
 ## Installation
 
-Install from dbt Hub after the first release is published:
-
-```yaml
-packages:
-  - package: northgraindata/http
-    version: [">=0.1.0", "<0.2.0"]
-```
-
-Install from GitHub before Hub publication:
+Install from GitHub:
 
 ```yaml
 packages:

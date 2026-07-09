@@ -33,6 +33,13 @@ jobs:
         run: uv run pytest
 
       - name: Create GitHub release
-        uses: softprops/action-gh-release@v2
-        with:
-          generate_release_notes: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" \
+            --repo "${GITHUB_REPOSITORY}" \
+            --verify-tag \
+            --fail-on-no-commits \
+            --generate-notes \
+            --title "${GITHUB_REF_NAME}" \
+            --notes "dbt-http ${GITHUB_REF_NAME}: adapter-aware HTTP macros for dbt projects. This release includes generated changelog entries grouped by change type."
