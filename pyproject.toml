@@ -12,7 +12,7 @@ dependencies = [
 dev = [
     "dbt-duckdb>=1.8,<2.0",
     "pytest>=8.0",
-    "ruff>=0.8.0",
+    "ruff>=0.15.22",
     "sqlfluff>=3.2.0",
     "sqlfluff-templater-dbt>=3.2.0",
 ]
